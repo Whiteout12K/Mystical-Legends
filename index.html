@@ -1,97 +1,222 @@
 <!DOCTYPE html>
- 
-<html lang="latin">
-<title>Top 5 Video Games</title>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<style>
-    body {
-        background-color: black;
-    }
+<html lang="en">
+<title>Mystical Legends</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href='https://fonts.googleapis.com/css?family=RobotoDraft' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
+.w3-bar-block .w3-bar-item {padding: 16px}
 </style>
+<body>
 
-<div class="box-0">
-    <center>
-        <img src="https://mysticallegends.w3spaces.com/VideoGames.png?bypass-cache=1628171728">
-    </center>
+
+<!-- Side Navigation -->
+
+<nav class="w3-sidebar w3-bar-block w3-collapse <!-- color --> w3-red w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
+
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large" onclick="openMail('Home');w3_close();"><center><img src="images/logo.png" style="width:60%;"></center></a>
+
+  <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
+
+  class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
+
+  <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Explore<i class="fa fa-caret-down w3-margin-left"></i></a>
+  <div id="Demo1" class="w3-hide w3-animate-left">
+
+
+
+    <!-- Sidebar Options -->
+
+    <a href="javascript:void(0)" class="w3-red w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Books');w3_close();">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="images/book.svg" style="width:15%;"><span class="w3-opacity w3-large">The Book Series</span>
+        <p>Read the official book series about the mystical island, how the mystical beings got to the island, and their many adventures afterwards.</p>
+      </div>
+    </a>
+
+     <a href="javascript:void(0)" class="w3-red w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Games');w3_close();">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="images/joycon.svg" style="width:15%;"><span class="w3-opacity w3-large">The Video Games</span>
+        <p>Play games that are based off of the offical book series.</p>
+      </div>
+    </a>
+
+    <a href="javascript:void(0)" class="w3-red w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Videos');w3_close();">
+      <div class="w3-container">
+        <img class="w3-round w3-margin-right" src="images/video.svg" style="width:15%;"><span class="w3-opacity w3-large">Videos</span>
+        <p>Welcome!</p>
+      </div>
+    </a>
+
+  </div>
+    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Sent</a>
+    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Drafts</a>
+    <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-margin-right"></i>Trash</a>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-button w3-hover-black w3-left-align" onclick="document.getElementById('id01').style.display='block'">Contact Us <i class="w3-padding fa fa-pencil"></i></a>
+  </nav>
+
+
+
+<!-- Modal that pops up when you click on "New Message" -->
+
+<div id="id01" class="w3-modal" style="z-index:4">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-padding w3-red">
+       <span onclick="document.getElementById('id01').style.display='none'"
+       class="w3-button w3-red w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+      <h2>Send Mail</h2>
+    </div>
+    <div class="w3-panel">
+      <label>To</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      <label>From</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      <label>Subject</label>
+      <input class="w3-input w3-border w3-margin-bottom" type="text">
+      <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="What's on your mind?">
+      <div class="w3-section">
+        <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+        <a class="w3-button w3-light-grey w3-right" onclick="document.getElementById('id01').style.display='none'">Send  <i class="fa fa-paper-plane"></i></a> 
+      </div>    
+    </div>
+  </div>
 </div>
 
-<p>
 
-<div class="box">   
-    <center>
-        <b>Top 5 Video Games of all Time!</b>
-    </center>
+<!-- Overlay effect when opening the side navigation on small screens -->
+
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+<!-- Page content -->
+
+<div class="w3-main" style="margin-left:320px;">
+<div class="background-color">
+<i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-left w3-margin-top" onclick="w3_open()"></i>
+<a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+
+
+<div id="Home" class="w3-container person">
+  <div class="box">
+  <center><img class="w3-round  w3-animate-top" src="images/mysticallegends.png" style="width:80%;"></center><hr><p>
+  <center><h1>Welcome to Mystical Legends</h1></center>
+  <p>Mystical Legends is created by Whiteout12 (Kenneth "Kenny" Calhoun). It was first developed from a small childhood idea to a school project to what it is now.
+  <hr><p>
+  <center><h1>Meet the Heroes</h1></center>
+  </div>
 </div>
 
-<p>
 
-<div class="box">
-    Below are listed the top five Video Games of all time by the opinion of Kenny Calhoun (of course):
-    <p>
-    <ol>1. Fortnite</ol>
-        <div class="text">
-            <p> This game is rated #1 because it contains three games in one. One is Save the World. This gamemode allows you to gain resources used to make weapons and this gamemode allows you to think stratagy. The second gamemode is an online batte royal free-for-all. And the third gamemode is a place where you can create your very own games.
-        </div>
-    <p><ol>2. Minecraft</ol>
-    <div class="text">
-            <p> This game is both a survival and creative game which makes it double the fun. It contains special objects which also allows you to create your very own games.
-        </div>
-    <p><ol>3. Super Smash Bros: Ultimate</ol>
-    <div class="text">
-            <p> This game is very fun to play with others. THis game features chracters which you eventually become a master of that fight against each other in a brawl. It is a very high graphic game that shows every detail of each character's attacks very clearly.
-        </div>
-    <p><ol>4. Lego Batman 3</ol>
-    <div class="text">
-            <p> This game had a storymode that went to many iconic locations. You could play over 50+ characters. There were large planets that you could explore and amazing mini-games.
-        </div>
-    <p><ol>5. Star Trek Legends</ol>
-    <div class="text">
-            <p> This game was very adicting and fun. It is an RPG game of stratagy. You fought off against other Star Trek characters. You upgraded your very own characters and progressed through a campaign.
-        </div>
-
+<div id="Books" class="w3-container person">
+  <div class="box">
+  <br>
+  <img class="w3-round  w3-animate-top" src="/w3images/avatar3.png" style="width:20%;">
+  <h5 class="w3-opacity">Subject: Remember Me</h5>
+  <h4><i class="fa fa-clock-o"></i> From Borge Refsnes, Sep 27, 2015.</h4>
+  <a class="w3-button w3-light-grey" href="#">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey" href="#">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <hr>
+  <p>Hello, i just wanted to let you know that i'll be home at lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Best Regards, <br>Borge Refsnes</p>
+  </div>
 </div>
+
+<div id="Games" class="w3-container person">
+  <div class="box">
+  <br>
+  <img class="w3-round w3-animate-top" src="/w3images/avatar5.png" style="width:20%;">
+  <h5 class="w3-opacity">Subject: None</h5>
+  <h4><i class="fa fa-clock-o"></i> From Jane Doe, Sep 25, 2015.</h4>
+  <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <hr>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <p>Forever yours,<br>Jane</p>
+  </div>
+</div>
+
+<div id="Videos" class="w3-container person">
+  <div class="box">
+  <br>
+  <img class="w3-round w3-animate-top" src="/w3images/avatar2.png" style="width:20%;">
+  <h5 class="w3-opacity">Subject: None</h5>
+  <h4><i class="fa fa-clock-o"></i> From John Doe, Sep 23, 2015.</h4>
+  <a class="w3-button w3-light-grey">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
+  <a class="w3-button w3-light-grey">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
+  <hr>
+  <p>Welcome.</p>
+  <p>That's it!</p>
+  </div>
+</div>
+     
+</div>
+</div>
+
+
+
+<script>
+var openInbox = document.getElementById("myBtn");
+openInbox.click();
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+function myFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show"; 
+    x.previousElementSibling.className += " w3-red";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-red", "");
+  }
+}
+
+openMail("Home")
+function openMail(personName) {
+  var i;
+  var x = document.getElementsByClassName("person");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x = document.getElementsByClassName("test");
+  for (i = 0; i < x.length; i++) {
+    x[i].className = x[i].className.replace(" w3-light-grey", "");
+  }
+  document.getElementById(personName).style.display = "block";
+  event.currentTarget.className += " w3-red";
+}
+</script>
+
+<script>
+var openTab = document.getElementById("firstTab");
+openTab.click();
+</script>
+
+</body>
+</html> 
+
 
 <style>
+  .box {
+    background-color: #FF5555;
+    color: white;
+    margin: 30px;
+    padding: 20px;
+    font-size: 30px;
+  }
 
-.box-0 {
-    background-color: black;
-    color: yellow;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-style: hidden;
-}
-
-.box {
-    background-color: black;
-    color: yellowgreen;
-    font-size: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-style: solid;
-    border-color: greenyellow;
-    border-width: 5px 5px 5px 5px;
-}
-
-.text {
-    font-size: 25px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-}
-
+  .background-color {
+    background-color: #FFBBBB;
+  }
 </style>
