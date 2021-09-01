@@ -7,18 +7,16 @@
   <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
  </head>
 <body style="margin: 0px">
- <div id="adobe-dc-view"></div>
- <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
- <script type="text/javascript">
-    document.addEventListener("adobe_dc_view_sdk.ready", function()
-    {
-        var adobeDCView = new AdobeDC.View({clientId: "911b5046f62d46c2a390eac93ea08776", divId: "adobe-dc-view"});
-        adobeDCView.previewFile(
-       {
-          content:   {location: {url: "images/Luces#1.pdf"}},
-          metaData: {fileName: "Luces#1.pdf"}
-       });
-    });
- </script>
+    <div id="adobe-dc-view"></div>
+<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+<script type="text/javascript">
+	document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+		var adobeDCView = new AdobeDC.View({clientId: "911b5046f62d46c2a390eac93ea08776", divId: "adobe-dc-view"});
+		adobeDCView.previewFile({
+			content:{promise: "images/Luces#1.pdf"},
+			metaData:{fileName: "images/Luces#1.pdf"}
+		}, {showDownloadPDF: false, showPrintPDF: false});
+	});
+</script>
 </body>
 </html>
