@@ -12,23 +12,20 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <body>
 
 
-<!-- Side Navigation -->
+
+
+<!-- Sidebar Navigation -->
 
 <nav class="w3-sidebar w3-bar-block w3-collapse <!-- color --> w3-red w3-animate-left w3-card" style="z-index:3;width:320px;" id="mySidebar">
-
   <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large" onclick="openMail('Home');w3_close();"><center><img src="images/logo.png" style="width:60%;"></center></a>
-
   <a href="javascript:void(0)" onclick="w3_close()" title="Close Sidemenu" 
-
   class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
-
   <a id="myBtn" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Explore<i class="fa fa-caret-down w3-margin-left"></i></a>
   <div id="Demo1" class="w3-hide w3-animate-left">
 
-
-
     <!-- Sidebar Options -->
 
+    <!-- Book Nav -->
     <a href="javascript:void(0)" class="w3-red w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Books');w3_close();">
       <div class="w3-container">
         <img class="w3-round w3-margin-right" src="images/book.svg" style="width:15%;"><span class="w3-opacity w3-large">The Book Series</span>
@@ -36,6 +33,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       </div>
     </a>
 
+    <!-- Game Nav -->
      <a href="javascript:void(0)" class="w3-red w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Games');w3_close();">
       <div class="w3-container">
         <img class="w3-round w3-margin-right" src="images/joycon.svg" style="width:15%;"><span class="w3-opacity w3-large">The Video Games</span>
@@ -43,6 +41,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
       </div>
     </a>
 
+    <!-- Video Nav -->
     <a href="javascript:void(0)" class="w3-red w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Videos');w3_close();">
       <div class="w3-container">
         <img class="w3-round w3-margin-right" src="images/video.svg" style="width:15%;"><span class="w3-opacity w3-large">Videos</span>
@@ -59,8 +58,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 
 
-<!-- Modal that pops up when you click on "New Message" -->
 
+<!-- Modal that pops up when you click on "New Message" -->
 <div id="id01" class="w3-modal" style="z-index:4">
   <div class="w3-modal-content w3-animate-zoom">
     <div class="w3-container w3-padding w3-red">
@@ -86,9 +85,12 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 
 
-<!-- Overlay effect when opening the side navigation on small screens -->
 
+<!-- Overlay effect when opening the side navigation on small screens -->
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay"></div>
+
+
+
 
 <!-- Page content -->
 
@@ -98,48 +100,81 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 <a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
 
 
+
+
+<!-- Home Page -->
 <div id="Home" class="w3-container person">
-  <div class="box">
-  <center><img class="w3-round  w3-animate-top" src="images/mysticallegends.png" style="width:80%;"></center>
-  </div>
-  <p>
 
   <div class="box">
-  
+  <center><img class="w3-round  w3-animate-top" src="images/mysticallegends.png" style="width:80%;"></center>
+  </div><p>
+
+  <div class="box"> 
   <center><h1>Welcome to Mystical Legends</h1></center>
   <p>Mystical Legends is created by Whiteout12 (Kenneth "Kenny" Calhoun). It was first developed from a small childhood idea to a school project to what it is now.
   <hr><p>
   <center><h1>Meet the Heroes</h1></center>
   </div>
+
 </div>
 
 
 
-<div id="Books" class="w3-container person">
-  <div class="box">
-  <br>
-  <img class="w3-round  w3-animate-top" src="/w3images/avatar3.png" style="width:20%;">
-  <h5 class="w3-opacity">Subject: Remember Me</h5>
-  <h4><i class="fa fa-clock-o"></i> From Borge Refsnes, Sep 27, 2015.</h4>
-  <a class="w3-button w3-light-grey" href="#">Reply<i class="w3-margin-left fa fa-mail-reply"></i></a>
-  <a class="w3-button w3-light-grey" href="#">Forward<i class="w3-margin-left fa fa-arrow-right"></i></a>
-  <hr>
-  <p>Hello, i just wanted to let you know that i'll be home at lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  <p>Best Regards, <br>Borge Refsnes</p>
 
-    <!-- Free Short Story Book - Zenith Luces and the Journey of the Mystical Beings -->
-    <p><button name="button">
-    <a href="luces.pdf" download>Zenith Luces and the Journey of the Mystical Beings</a>
-    </button> </p>
+<!-- Book Page -->
+<div id="Books" class="w3-container person">
+
+  <div class="box">
+  <center><h1>Mystical Legends - The Books Series</h1></center>
+  <center><img class="w3-round  w3-animate-top" src="/w3images/avatar3.png" style="width:20%;"></center>
+  <hr>
+  <p>The Mystical Legends - Book Series features two ages:<br><br>The 100 Years Before, or the time of Zenith Luces,<br>The Present, the rise of the Mystical Legends.</p>
+  <p>Have you ever wodered whether there actually were creatures and species like Elves, Goblins, Naiads, etc...? Well you can learn how they survive in the modern world in an exciting book series! Mystical Legends is a science fiction series about the real world with mythical (or rather mystical, in this sense) creatures. The series features times of the Romans and how the mystical beings lived then, the 20th century and how the mystical beings found a new island to inhabit and how they defeated evil villainy, and the modern age and how the mystical beings enhanced their society and technology beyond what is imagined by a human. Take a narrative life of the modern age by a boy who had a complicated history or take a narratated life of a boy who saved the mystical beings from the mainlands.</p>
+  <hr>
+
+    <!-- Free Short Story Book - Zenith Luces and the Journey of the Mystical Beings --> <p>
+
+      <table style="background-color:rgb(184, 39, 39);margin: 30px 30px 30px 30px;padding:15px;">
+        <tr> 
+          <td>
+              <img class="w3-round  w3-animate-top" src="images/zl1.png" style="width:180px;height:300px;float:left;margin: 0 15px 0 0;">
+              <h2>Zenith Luces and the Journey of the Mystical Beings</h2>
+              <h6>Book #0 of the Zenith Luces Series</h6>
+              The first book in the Mystical Legends - Zenith Luces series. This short story features a boy who wants to help people for the cause of good. He suddenly finds himself being the leader of the mystical beings who want to find a place to live away from the mainlands.
+              <!-- Download Button -->
+              <center><button type="button" style="float:left;padding:15px;margin:15px;">
+              <a href="luces.pdf" download style="text-decoration:none;">Click to download PDF.</a>
+              </button></center>
+          </td>
+      </tr>
+      </table>
+
+      <table style="background-color:rgb(184, 39, 39);margin: 30px 30px 30px 30px;padding:15px;">
+        <tr> 
+          <td>
+              <img class="w3-round  w3-animate-top" src="images/ml1.png" style="width:180px;height:300px;float:left;margin: 0 15px 0 0;">
+              <h2>Mystical Legends - Rune of the Spellcaster</h2>
+              <h6>Book #1 of the Mystical Legends Series</h6>
+              The first book in the Mystical Legends Series. A boy who does not know his history finds himself revealing all the secrests hidden from him. There is a strange object that a shadow lord is in search of and the boy is the key to it. Journey through the first book to find out the modern life of the mystical beings, how the boy saves the island, and how he learns about his past.
+              <!-- Download Sample Button -->
+              <center><button type="button" style="float:left;padding:15px;margin:15px;">
+              <a href="" download style="text-decoration:none;">Click to download a sample PDF.</a>
+              </button></center>
+          </td>
+      </tr>
+      </table>
 
   <br>
   </div>
+
 </div>
 
 
 
+
+<!-- Game Page -->
 <div id="Games" class="w3-container person">
+
   <div class="box">
   <br>
   <img class="w3-round w3-animate-top" src="/w3images/avatar5.png" style="width:20%;">
@@ -151,11 +186,15 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   <p>Forever yours,<br>Jane</p>
   </div>
+
 </div>
 
 
 
+
+<!-- Video Page -->
 <div id="Videos" class="w3-container person">
+
   <div class="box">
   <br>
   <img class="w3-round w3-animate-top" src="/w3images/avatar2.png" style="width:20%;">
@@ -167,12 +206,19 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
   <p>Welcome.</p>
   <p>That's it!</p>
   </div>
+
 </div>
-     
+    
+
 </div>
 </div>
 
 
+
+
+
+
+<!-- Javascript -->
 
 <script>
 var openInbox = document.getElementById("myBtn");
@@ -222,7 +268,7 @@ openTab.click();
 </script>
 
 </body>
-</html> 
+
 
 
 <style>
@@ -238,3 +284,4 @@ openTab.click();
     background-color: #FFBBBB;
   }
 </style>
+</html> 
