@@ -8,8 +8,13 @@ then your use, modification, or distribution of it requires the prior
 written permission of Adobe.
 */
 
-/* Helper function to render the file using PDF Embed API. */
-function previewFile(filePromise, fileName) {
+/* Pass the embed mode option here */
+var viewerConfig = {
+    embedMode: "SIZED_CONTAINER"
+};
+
+/* Wait for Adobe Document Services PDF Embed API to be ready */
+document.addEventListener("adobe_dc_view_sdk.ready", function () {
     /* Initialize the AdobeDC View object */
     var adobeDCView = new AdobeDC.View({
         /* Pass your registered client id */
@@ -22,45 +27,24 @@ function previewFile(filePromise, fileName) {
     adobeDCView.previewFile({
         /* Pass information on how to access the file */
         content: {
-            /* pass file promise which resolve to arrayBuffer */
-            promise: filePromise,
+            /* Location of file where it is hosted */
+            location: {
+                url: "https://documentcloud.adobe.com/link/file/?locale=en-US&uri=urn%3Aaaid%3Asc%3Aus%3A516c970f-7a9b-45f7-96a0-cbc1a7ce49ff&filetype=application%2Fpdf&size=467906 Luces1.pdf",
+                /*
+                If the file URL requires some additional headers, then it can be passed as follows:-
+                header: [
+                    {
+                        key: "<HEADER_KEY>",
+                        value: "<HEADER_VALUE>",
+                    }
+                ]
+                */
+            },
         },
         /* Pass meta data of file */
         metaData: {
             /* file name */
-            fileName: fileName
+            fileName: "Bodea Brochure.pdf"
         }
-    }, {});
-}
-
-/* Helper function to check if selected file is PDF or not. */
-function isValidPDF(file) {
-    if (file.type === "application/pdf") {
-        return true;
-    }
-    if (file.type === "" && file.name) {
-        var fileName = file.name;
-        var lastDotIndex = fileName.lastIndexOf(".");
-        return !(lastDotIndex === -1 || fileName.substr(lastDotIndex).toUpperCase() !== "PDF");
-    }
-    return false;
-}
-
-/* Helper function to listen for file upload and
- * creating Promise which resolve to ArrayBuffer of file data.
- **/
-function listenForFileUpload() {
-    var fileToRead = document.getElementById("file-picker");
-    fileToRead.addEventListener("change", function (event) {
-        var files = fileToRead.files;
-        if (files.length > 0 && isValidPDF(files[0])) {
-            var fileName = files[0].name;
-            var reader = new FileReader();
-            reader.onloadend = function (e) {
-                var filePromise = Promise.resolve(e.target.result);
-                previewFile(filePromise, fileName);
-            };
-            reader.readAsArrayBuffer(files[0]);
-        }
-    }, false);
-}
+    }, viewerConfig);
+});
