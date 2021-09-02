@@ -1,26 +1,19 @@
-<!--Get the samples from https://www.adobe.com/go/pdfembedapi_samples-->
 <!DOCTYPE html>
 <html>
 <head>
-<title>Adobe Document Services PDF Embed API Sample</title>
- <meta charset="utf-8"/>
- <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
- <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Adobe Document Services PDF Embed API Sample</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="index.js"></script>
 </head>
-<body style="margin: 0px">
- <div id="adobe-dc-view"></div>
- <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
- <script type="text/javascript">
-    document.addEventListener("adobe_dc_view_sdk.ready", function()
-    {
-        var adobeDCView = new AdobeDC.View({clientId: "911b5046f62d46c2a390eac93ea08776", divId: "adobe-dc-view"});
-        adobeDCView.previewFile(
-       {
-          content:   {location: {url: "https://mysticallegends.pages.dev/luces.docx luces.docx"}},
-          metaData: {fileName: "luces.docx"}
-       },  {showAnnotationTools: false, showLeftHandPanel: false, showDownloadPDF: false, 
-			showPrintPDF: false});
-    });
- </script>
+<body onload="listenForFileUpload()" style="margin: 0px">
+    <div id="adobe-dc-view">
+        <div style="margin: 50px;">
+            <label for="file-picker">Choose a PDF File:</label>
+            <input type="file" id="file-picker" name="file-picker" accept="application/pdf">
+        </div>
+    </div>
+    <script type="text/javascript" src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
 </body>
 </html>
