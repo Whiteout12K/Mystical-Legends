@@ -29,7 +29,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         content: {
             /* Location of file where it is hosted */
             location: {
-                url: "https://documentcloud.adobe.com/link/file/?locale=en-US&uri=urn%3Aaaid%3Asc%3Aus%3A516c970f-7a9b-45f7-96a0-cbc1a7ce49ff&filetype=application%2Fpdf&size=467906 Luces1.pdf",
+                url: "https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:8c6547e0-2916-4d39-a89f-2d5a2f1d3986 Luces1.pdf",
                 /*
                 If the file URL requires some additional headers, then it can be passed as follows:-
                 header: [
@@ -44,7 +44,7 @@ document.addEventListener("adobe_dc_view_sdk.ready", function () {
         /* Pass meta data of file */
         metaData: {
             /* file name */
-            fileName: "Bodea Brochure.pdf"
+            fileName: "Zenith Luces and the Journey of the Mystical Beings"
         }
     }, viewerConfig);
 });
