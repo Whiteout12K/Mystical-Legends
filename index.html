@@ -104,16 +104,44 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
 
 <!-- Home Page -->
 <div id="Home" class="w3-container person">
-
   <div class="box">
   <center><img class="w3-round  w3-animate-top" src="images/mysticallegends.png" style="width:80%;"></center>
   </div><p>
-
   <div class="box"> 
   <center><h1>Welcome to Mystical Legends</h1></center>
   <p>Mystical Legends is created by Whiteout12 (Kenneth "Kenny" Calhoun). It was first developed from a small childhood idea to a school project to what it is now.
+  <br><br>Take a journey to an island of wonders thought to be impossible by humans. See the life and the world which the mystical beings (a species comprised of elves, goblins, satyrs, naiads, etc...) created. Read amazing stories of various witnesses of the changes of the island, the battles against evil, and the protection of the secrecy. Watch episodes (and shorts) based on the books and the characters. Play the games based off of the books and see the world for yourself.
   <hr><p>
   <center><h1>Meet the Heroes</h1></center>
+
+  <center><table style="background-color:rgb(184, 39, 39);margin: 15px 15px 15px 15px;padding:15px;float:center;">
+    <tr>
+      <td>
+    <!-- Toggle of you want to show the hero list -->
+    <center><button type="button" style="padding:15px;margin:15px;" onclick="document.getElementById('display').style.display='block'">
+    Show Character List</button></center>
+    <center><button type="button" style="padding:15px;margin:15px;" onclick="document.getElementById('display').style.display='none'">
+    Hide Character List</button></center>
+      </td>
+    </tr>
+  </table> <br></center>
+
+  <table id="display" style="background-color:rgb(184, 39, 39);margin: 15px 15px 15px 15px;padding:15px;">
+    <tr> 
+      <td>
+          <img class="w3-round  w3-animate-top" id="avery" src="images/avery1.png" style="width:150px;height:325px;float:left;margin: 0 15px 0 0;">
+          <h2>Avery Marcus Obtainia</h2>
+          <h6>Skills: Math and Latin Expert, Magic, Water, Light</h6>
+          Character of the present era. The main character in the Mystical Legends series. He is the son of the last Angelor and the first to unite a team of mystical beings who can defeat the uprising evil that roams about.
+          <!-- Style Buttons -->
+          <center><button type="button" style="float:left;padding:15px;margin:15px;" onclick="document.getElementById('avery').src='images/avery1.png';document.getElementById('avery').style.width='150px'">
+          Avery (Regular)</button></center>
+          <center><button type="button" style="float:left;padding:15px;margin:15px;" onclick="document.getElementById('avery').src='images/avery2.png';document.getElementById('avery').style.width='300px'">
+          Avery (Hero)</button></center>
+      </td>
+  </tr>
+  </table>
+
   </div>
 
 </div>
