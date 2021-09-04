@@ -120,12 +120,14 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
     <!-- Toggle of you want to show the hero list -->
     <center><button type="button" style="padding:15px;margin:15px;"
       onclick="
+        document.getElementById('display4').style.display='block';
         document.getElementById('display3').style.display='block';
         document.getElementById('display2').style.display='block';
         document.getElementById('display').style.display='block'">
     Show Character List</button></center>
     <center><button type="button" style="padding:15px;margin:15px;"
       onclick="
+        document.getElementById('display4').style.display='none';
         document.getElementById('display3').style.display='none';
         document.getElementById('display2').style.display='none';
         document.getElementById('display').style.display='none'">
@@ -178,6 +180,24 @@ html,body,h1,h2,h3,h4,h5 {font-family: "RobotoDraft", "Roboto", sans-serif}
           Ted (Regular)</button></center>
           <center><button type="button" style="float:left;padding:15px;margin:15px;" onclick="document.getElementById('ted').src='images/ted2.png';document.getElementById('ted').style.width='250px'">
           Ted (Hero)</button></center>
+      </td>
+  </tr>
+  </table>
+
+  <table id="display4" style="background-color:rgb(184, 39, 39);margin: 15px 15px 15px 15px;padding:15px;">
+    <tr> 
+      <td>
+          <img class="w3-round  w3-animate-top" id="caleb" src="images/caleb1.png" style="width:160px;height:325px;float:left;margin: 0 15px 0 0;">
+          <h2>Caleb Icelander</h2>
+          <h6>Skills: Genius, IT Specialist, Technology Nerd and Maker, Planner and Organizer, Ice Powers and Portal Abilities</h6>
+          Character of the present era. The close compainion of Avery Obtainia. She is a Naiad who first found Avery and taught him all the secrets about the mystical beings. She is not the best fighter there is, but she can work well with melee weapons.
+          <!-- Style Buttons -->
+          <center><button type="button" style="float:left;padding:15px;margin:15px;" onclick="document.getElementById('caleb').src='images/caleb1.png';document.getElementById('caleb').style.width='160px'">
+          Caleb (Regular)</button></center>
+          <center><button type="button" style="float:left;padding:15px;margin:15px;" onclick="document.getElementById('caleb').src='images/caleb2.png';document.getElementById('caleb').style.width='160px'">
+          Caleb (Hero)</button></center>
+          <center><button type="button" style="float:left;padding:15px;margin:15px;" onclick="document.getElementById('caleb').src='images/caleb3.png';document.getElementById('caleb').style.width='140px'">
+          Caleb (ITA Agent)</button></center>
       </td>
   </tr>
   </table>
