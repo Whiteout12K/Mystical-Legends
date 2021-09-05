@@ -43,9 +43,16 @@ li a:hover:not(.active) {
 
 .active {
   background-color: #e42b13;
+  background-image: linear-gradient(#f1503b, rgb(236, 17, 17))
 }
 
 .flex-container {
   display: flex;
   flex-direction: row;
+}
+
+.endbox {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
 }
