@@ -56,3 +56,8 @@ li a:hover:not(.active) {
     display: flex;
     flex-direction: column;
 }
+
+.infobody {
+    padding: 5px;
+    margin: 20px;
+}
