@@ -61,3 +61,15 @@ li a:hover:not(.active) {
     padding: 5px;
     margin: 20px;
 }
+
+.button {
+    border: none;
+    background-color: rgb(236, 233, 233);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 15px;
+    cursor: pointer;
+}
