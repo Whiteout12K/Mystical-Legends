@@ -62,6 +62,13 @@ li a:hover:not(.active) {
     flex-direction: column;
 }
 
+.endbox2 {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+
 .infobody {
     padding: 5px;
     margin: 20px;
