@@ -38,7 +38,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: rgb(54, 53, 53);
 }
 
 .active {
@@ -84,4 +84,30 @@ li a:hover:not(.active) {
     font-size: 12px;
     margin: 15px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .flex-box, .flex-box2, .flex-box3, .flex-box4 {
+    width: 50%;
+  }
+}
+
+.flex-box {
+  width: 40%;
+  float: left;
+}
+
+.flex-box2 {
+  width: 40%;
+  float: left;
+}
+
+.flex-box3 {
+  width: 40%;
+  float: left;
+}
+
+.flex-box4 {
+  width: 40%;
+  float: left;
 }
