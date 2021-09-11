@@ -76,12 +76,12 @@ li a:hover:not(.active) {
 
 .button {
     border: none;
-    background-color: rgb(236, 233, 233);
+    background-color: rgb(214, 209, 209);
     color: rgb(0, 0, 0);
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 12px;
-    margin: 15px;
+    margin: 5px;
     cursor: pointer;
 }
